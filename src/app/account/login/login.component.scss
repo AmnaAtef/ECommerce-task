@@ -1,0 +1,69 @@
+.google-login{
+    border: 2px solid rgba(0, 0, 0, 0.49);
+    border-radius: 42px;
+}
+.form-side{
+    position: relative;
+    top: 20%;
+    width: inherit;
+}
+.main-color{
+    color: rgba(108, 99, 255, 0.69);
+}
+.login-btn{
+    border-radius: 42px;
+    background-color: #6C63FF !important;
+    color: white !important;
+    border: 1px solid #6C63FF;
+}
+.login-side-img{
+    background-color: #6C63FF;
+    height: 100vh;
+}
+
+//fields
+::ng-deep{
+    //fields
+.mdc-text-field--outlined .mdc-notched-outline{
+    // background-color: #f5f5f5 !important;
+    border-radius: 22.5px !important;
+}
+.mat-mdc-form-field-infix{
+    height: 46px !important;
+    min-height: 46px !important;
+}
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading{
+    border-radius: 22.5px 0 0 22.5px !important;
+
+}
+.mdc-notched-outline__trailing{
+    border-radius: 0 22.5px 22.5px 0 !important;
+}
+.mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label{
+    font-size: 14px !important;
+    padding: 0 20px !important;
+}
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-text-field__input{
+    font-size: 15px !important;
+}
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix{
+       border-radius: 22.5px !important;
+}
+.mat-mdc-form-field-input-control::placeholder{
+    font-size: 14px !important;
+}
+.mat-mdc-form-field-input-control{
+    padding: 0 20px !important;
+}
+input.mdc-text-field__input{
+    max-width: 90% !important;
+}
+// to text center of mat-form field 
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label{
+    margin-top: -5px !important;
+}
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-text-field__input{
+    display: block !important;
+    margin-top: -5px !important;
+}
+}

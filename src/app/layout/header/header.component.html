@@ -1,0 +1,32 @@
+<nav class="navbar ">
+    <div class="container">
+        <div>
+            <img src="../../../assets/images/logo.png" alt="Logo" width="110" height="30">
+            <a routerLink="/" class="link mx-3">Sell on Shopka</a>
+            <a routerLink="/" class="link">Register</a>
+        </div>
+  
+      <!-- search bar -->
+      <div class="searchbar pt-4">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="material-icons input-group-text">
+              search
+              </span>
+          </div>
+          <input type="text" class="form-control"  placeholder="Search... ">
+        </div>
+       
+      </div> <!-- search bar-->
+  
+    <div>
+        <button mat-raised-button class="signin-btn px-1 py-0" (click)="navigateToSignin()">              
+            Sign in
+        </button>
+        <button mat-raised-button [matBadge]="cartItemCount" class="my-cart-btn mx-3">
+            My cart
+        </button>
+        <img src="../../../assets/images/user-image.png" alt="User Image" width="30" height="30">
+    </div>
+    </div>
+  </nav>

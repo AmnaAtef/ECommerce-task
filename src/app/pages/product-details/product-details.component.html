@@ -1,0 +1,86 @@
+<div class="container-fluid single-product-card">
+    <div>
+        <div class="row">
+            <!-- product Image -->
+           <div class="col-lg-6 col-md-12 col-sm-12">
+               <img src="../../../assets/images/single-product.png" alt="product image" class="product-side-img"> 
+               <a routerLink="/home" class="back">
+                   <img src="../../../assets/images/back-to-list.png">
+               </a>
+           </div>
+            <!-- product Details -->
+           <div class="col-lg-6 col-md-12 col-sm-12 product-details">
+               <div class="p-5">
+                   <div class="hot-sale mb-3">
+                       <small>HOTSALE</small>
+                   </div>
+                   <h2>
+                       Whiskas® Dry Adult Dewasa 7+, Cat food Rasa Mackerel
+                   </h2>
+                   <div class="d-flex flex-wrap my-auto">
+                       <small class="text-success pt-2 border-right">CAT FOOD</small>
+                       <div class="mx-3 d-flex">
+                           <ul class="list-inline rating-list" *ngFor="let star of stars">
+                               <li >
+                                   <span class="material-icons star-icon">
+                                       star
+                                   </span>
+                               </li>
+                           </ul>
+                       </div>
+                       <small class="pt-2">4.9 (2130 reviews)</small>
+                   </div>
+                   <!-- Description Section -->
+                   <section>
+                       <h6>Description:</h6>
+                       <ul>
+                           <li *ngFor="let description of description_list">{{description}}</li>
+                       </ul>
+                   </section>
+                     <!-- Ingrendients Section -->
+                     <h6>Size:</h6>
+                     <span *ngFor="let size of sizes_list;let i=index" class="mx-2">
+                         <small class="size-box" [ngClass]="i==0 ?'selected':''">
+                             {{size}}
+                         </small>
+                       </span>
+                    <!-- Ingrendients Section -->
+                   <section>
+                       <h6 class="mt-3">Ingrendients:</h6>
+                       <ul>
+                           <li *ngFor="let ingrendient of ingrendient_list">{{ingrendient}}</li>
+                       </ul>
+                   </section>
+               </div>
+           </div>
+       </div>
+    </div>
+</div>
+<div class="container">
+    <mat-card class="p-2 add-summary-card">
+        <div class="d-flex flex-wrap justify-content-between my-auto">
+            <div class="d-flex ">
+                <img src="../../../assets/images/small-product.png">
+                <div class="my-auto">
+                    <h6>Whiskas® Dry Adult Dewasa 7+, Cat food Rasa Mackerel</h6>
+                    <small class="text-success">CAT FOOD</small>
+                </div>
+            </div>
+            <div class="d-flex flex-wrap my-auto">
+                <div class="mx-5 my-auto pt-2">
+                    <small>Qty:</small>
+                    <button class="border-0 bg-transparent" (click)="increment()">
+                        <span class="material-icons add-icon">add</span>
+                      </button>
+                    <span class="count mx-3">{{count}}</span>
+                    <button class="border-0 bg-transparent" (click)="decrement()">
+                        <span class="material-icons remove-icon">remove</span>   
+                      </button>                    
+                </div>
+                <button mat-raised-button class="add-to-card mx-3 my-md-0 my-3" (click)="addToCart()">
+                    ADD TO CARD
+                </button>
+            </div>
+        </div>
+    </mat-card>
+</div>

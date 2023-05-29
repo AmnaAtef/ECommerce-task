@@ -1,0 +1,30 @@
+<mat-card class="p-4">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 mt-2 card-product" 
+             *ngFor="let product of products_list;let i=index">
+             <div (click)="getProductDetails(product.id)">
+                <img [src]="product.image" alt="product image" width="160" height="160">
+                <p>{{product.title}}</p>
+                <b class="d-block">${{product.price}}</b>
+                <small class="text-muted d-block">{{product.description}}</small>
+                <div class="d-flex flex-wrap justify-content-between my-auto">
+                    <div>
+                        <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
+                            <li (click)="ChangeRate(product.id,star)" [ngClass]="{'selected': (star <= product.rate)}">
+                                <span class="material-icons star-icon">
+                                    star
+                                </span>
+                            </li>
+                        </ul>
+                        <small class="px-1">{{product.rate}}</small>
+                    </div>
+                    <button mat-stroked-button class="favorite-btn px-1 py-0">
+                        <span class="material-icons favorite-icon">favorite_border</span>                    
+                        Watch
+                    </button>
+                </div>
+             </div>
+           
+        </div>
+    </div>
+</mat-card>

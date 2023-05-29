@@ -1,0 +1,54 @@
+.searchbar{
+    width: 30%;
+    .form-control,
+    .input-group-text{
+        background-color: #EDEDF0;
+        border: none;
+    }
+    .form-control{
+        border-radius: 0 20px 20px 0;
+        &:focus{
+            box-shadow: none;
+        }
+        &::placeholder{
+            font-size: 14px;
+        }
+    }
+    .input-group > :not(:first-child):not(.invalid-feedback){
+        margin-left: -5px;
+        border: 0;
+    }
+    .input-group-text{
+        color: #707070;
+        font-size: 1.4rem;
+        border: 1px solid #F4F4F4;
+        padding: 0 0 0 0.5rem;
+        border-radius: 20px 0 0 20px;
+    }
+}
+.link{
+    font-size: 15px;
+    color: #5A5B6A;
+    text-decoration: none;
+}
+.signin-btn,
+.my-cart-btn{
+    color: #2264D1 !important;
+    border: 1px solid #2264D1 !important;
+    font-size: 12px !important;
+    height: 31px;
+    margin: 10px 0px;
+}
+::ng-deep .mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content{
+    background-color: #F44336;
+}
+@media screen and (max-width: 768px) {
+    .searchbar{
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    .searchbar{
+        display: block;
+    }
+}

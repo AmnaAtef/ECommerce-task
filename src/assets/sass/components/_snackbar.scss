@@ -1,0 +1,15 @@
+.green-snackbar{
+    background-color: #459647 !important;
+    color: white !important;
+    --mdc-snackbar-container-color:unset !important;
+}
+.red-snackbar{
+    background-color: #D41212 !important;
+    color: white !important;
+    font-size: 17px !important;
+    --mdc-snackbar-container-color:unset !important;
+}
+.mat-mdc-snack-bar-container .mdc-snackbar__label{
+    font-family: 'Inter', sans-serif !important;
+    color: white !important;
+}
