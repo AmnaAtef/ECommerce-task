@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { interceptorProviders } from './core/interceptors';
+import { LoaderService } from './shared/loader/loader.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    LoaderService,
+    interceptorProviders,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
